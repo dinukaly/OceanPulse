@@ -1,0 +1,1 @@
+const SOSAlert = require("../model/SosAlertSchema");

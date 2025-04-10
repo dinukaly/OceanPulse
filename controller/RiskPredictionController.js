@@ -1,0 +1,1 @@
+const RiskPrediction = require("../model/RiskPredictionSchema");

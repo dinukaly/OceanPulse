@@ -1,0 +1,1 @@
+const WeatherLog = require("../model/WeatherLogSchema");
