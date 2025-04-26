@@ -7,10 +7,24 @@ const UserSchema = new mongoose.Schema(
       required: true,
       unique: true,  
     },
-    displayName: {
+    firstName: {
       type: String,
       required: true,
     },
+    lastName: {
+      type: String,
+      required: true,
+    },
+    email: {
+      type: String,
+      required: true,
+      unique: true,
+    },
+    dateOfBirth: {
+      type: Date,
+      required: true,
+    },
+
     avator:{
         type:Object //[{hash, resourceUrl, directory, filename}]
     },
@@ -18,6 +32,9 @@ const UserSchema = new mongoose.Schema(
         type:String,
         required:true
         
+    },
+    isActive: {
+      type: Boolean,
     },
     phone: {
       type: String,
@@ -30,12 +47,6 @@ const UserSchema = new mongoose.Schema(
       default: "Sinhala",
     },
     boatId: String, // Only applicable to fishermen
-
-    role: {
-      type: String,
-      enum: ["fisherman", "coast-guard", "admin"],
-      default: "fisherman",
-    },
 
     emergencyContact: {
       name: String,
